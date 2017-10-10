@@ -1,0 +1,17 @@
+{
+  "name": "site-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geralle Estes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.1",
+    "promise": "^8.0.1",
+    "request": "^2.83.0",
+    "xml2js": "^0.4.19"
+  }
+}
