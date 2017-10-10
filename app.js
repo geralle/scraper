@@ -1,6 +1,7 @@
 const request = require('request')
-const Promist = require('promise')
+const Promise = require('promise')
 const parseString = require('xml2js').parseString;
+const difflib = require('difflib');
 
 var url = "https://store.obeygiant.com/sitemap_products_1.xml"
 var userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36"
@@ -21,6 +22,7 @@ function getProductLinks(){
         }
         for(var i=0;i<result.urlset.url.length;i++){
           productLinks.push(result.urlset.url[i].loc[0])
+          resolve(productLinks)
         }
       })
       return productLinks
@@ -28,8 +30,14 @@ function getProductLinks(){
   })
 }
 
-getProductLinks().then(function(data){
-  console.log(data)
-}).catch(function(err) {
-  console.err(err);
-});
+function differ(){
+  getProductLinks().then(function(data){
+    console.log(data)
+  })
+ }
+
+function driver(){
+
+}
+
+differ()

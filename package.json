@@ -9,6 +9,7 @@
   "author": "Geralle Estes",
   "license": "ISC",
   "dependencies": {
+    "difflib": "^0.2.4",
     "express": "^4.16.1",
     "promise": "^8.0.1",
     "request": "^2.83.0",
